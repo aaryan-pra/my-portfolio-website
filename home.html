@@ -268,9 +268,13 @@ button:hover {
 </div>
         </div>
     </div>
-    <div class="content">
+    <div class="content"><div class="content">
+    <h1 id="greeting">Welcome to My Portfolio</h1>
+    <p>I am learning web development and building amazing projects!</p>
+</div>
         <h1>Welcome to My Portfolio</h1>
         <p>I am learning web development and building amazing projects!</p>
+        
     </div>
     <div class="about">
         <h2>About Me</h2>
@@ -358,12 +362,27 @@ function countClicks() {
     document.getElementById('clickCount').innerText = clickCount;
 }
 </script>
+</script>
 
-</body>
-</html>
-</body>
-</html>
-</body>
-</body>
+<script>
+// Dynamic Greeting Function
+function updateGreeting() {
+    const hour = new Date().getHours();
+    const greetingElement = document.getElementById('greeting');
+    
+    if (hour < 12) {
+        greetingElement.innerHTML = 'Good Morning! ☀️';
+    } else if (hour < 17) {
+        greetingElement.innerHTML = 'Good Afternoon! 🌤️';
+    } else if (hour < 21) {
+        greetingElement.innerHTML = 'Good Evening! 🌙';
+    } else {
+        greetingElement.innerHTML = 'Good Night! 🌟';
+    }
+}
+
+// Page load par greeting update karega
+updateGreeting();
+</script>
 </body>
 </html>
