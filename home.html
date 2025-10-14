@@ -237,6 +237,9 @@ button:hover {
         <h1>Aaryan Prajapati</h1>
         <p>Frontend Developer | HTML | CSS | JavaScript</p>
         <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        <button onclick="countClicks()">👍 Click Counter: <span id="clickCount">0</span></button>
+</div>
+        </div>
     </div>
     <div class="content">
         <h1>Welcome to My Portfolio</h1>
@@ -318,7 +321,19 @@ function toggleDarkMode() {
     document.body.style.color = 'white';
 }
 </script>
+    </script>
 
+<script>
+let clickCount = 0;
+
+function countClicks() {
+    clickCount++;
+    document.getElementById('clickCount').innerText = clickCount;
+}
+</script>
+
+</body>
+</html>
 </body>
 </html>
 </body>
